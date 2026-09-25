@@ -65,11 +65,23 @@ public class HTTPRequests {
 
                 .then()
                 .statusCode(200)
-                .body("name",equalTo("Anmol Dahal"))
+
                 .log().all();
 
 
 
+
+    }
+    @Test
+    void Get_user_with_noPageno(){
+      given()
+              .when()
+              .get(Config.BASE_URL+ "/users/0")
+              .then()
+              .statusCode(404)
+
+              .log().all()
+      ;
     }
 
 

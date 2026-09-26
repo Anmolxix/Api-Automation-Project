@@ -1,4 +1,4 @@
-package test;
+package test.HTTPRequests;
 /*
 given()
 content type , set cookies , add auth, add param, set headers info etc..
@@ -11,17 +11,13 @@ validate status code, extract response , extract headers cookies and response bo
 */
 
 import org.testng.annotations.Test;
+import test.Config;
+
 import java.util.HashMap;
 
-
-import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
-import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matchers.*;
 
 
 public class HTTPRequests {
